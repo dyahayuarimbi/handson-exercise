@@ -1,14 +1,15 @@
-const initialState = { value: "" };
+const initialState = { value: ''};
 
 function queryReducer(state = initialState, action) {
   switch (action.type) {
     case "set":
-      return { ...state, value: action.payload };
-    case "reset":
-      return { ...state, value: "" };
+      return { ...state,  value: action.payload};
+  //  case "reset":
+  //    return {...state, value: action.payload};
     default:
       return state;
   }
+  
 }
 
 export default queryReducer;

@@ -1,10 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import QueryReducer from "./slice/query-slice";
-// import queryReducer from "./query/reducer";
+
+import queryReducer from "./queryReducer";
 
 export default configureStore({
   reducer: {
-    query: QueryReducer
+    query: queryReducer
+    // results:resultreducer
   }
   // devTools: true
 });
