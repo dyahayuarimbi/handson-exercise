@@ -2,7 +2,7 @@ import { useState } from "react";
 import SearchBar from "../../components/SearchBar";
 import Gif from "../../components/Gif";
 
-const Home = () => {
+const Search = () => {
   const GIPHY_KEY = process.env.REACT_APP_GIPHY_KEY;
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
@@ -42,4 +42,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Search;
