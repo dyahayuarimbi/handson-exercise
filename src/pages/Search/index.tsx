@@ -1,19 +1,19 @@
 import { useState } from "react";
-import SearchBar from "../../components/SearchBar";
 import Gif from "../../components/Gif";
+import SearchBar from "../../components/SearchBar";
 
 const Search = () => {
   const GIPHY_KEY = process.env.REACT_APP_GIPHY_KEY;
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (any:any) => {
+    any.preventDefault();
     getData();
   };
 
-  const handleChange = (e) => {
-    setQuery(e.target.value);
+  const handleChange = (any:any) => {
+    setQuery(any.target.value);
   };
 
   const getData = async () => {
@@ -35,7 +35,7 @@ const Search = () => {
         onSubmit={handleSubmit}
       />
       <br />
-      {results.map((it) => (
+      {results.map((it:any) => (
         <Gif key={it.id} source={it.images.downsized.url} title={it.title} />
       ))}
     </>
